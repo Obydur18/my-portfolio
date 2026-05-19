@@ -1,182 +1,220 @@
-export default function Portfolio() {
-  return (
-    <div className="min-h-screen bg-gray-950 text-white font-sans">
-      {/* Hero Section */}
-      <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-br from-blue-900 via-gray-900 to-orange-700">
-        <div className="w-24 h-24 rounded-full bg-orange-500 flex items-center justify-center text-3xl font-bold shadow-lg mb-6">
-          MR
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Obydur Rahman | Mechanical Engineer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .animated-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311005 100%);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-white font-sans antialiased">
+
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 animated-bg relative overflow-hidden">
+        <div class="absolute opacity-10 -right-20 -top-20 text-[300px] animate-[spin_60s_linear_infinite]">⚙️</div>
+        <div class="absolute opacity-5 -left-20 -bottom-20 text-[250px] animate-[spin_40s_linear_infinite_reverse]">⚙️</div>
+        <div class="w-28 h-28 rounded-2xl bg-gradient-to-tr from-orange-500 to-amber-600 flex items-center justify-center text-4xl font-extrabold shadow-2xl mb-8 transform rotate-3 hover:rotate-12 transition duration-300">OR</div>
+        <h1 class="text-5xl md:text-7xl font-black mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-orange-400">Md Obydur Rahman</h1>
+        <p class="text-xl md:text-2xl font-medium text-orange-400 mb-6 tracking-wide">Mechanical Engineering Student @ KUET | CAD Designer</p>
+        <p class="max-w-3xl text-slate-300 text-lg leading-relaxed mb-10">Passionate about automotive engineering, aerodynamics, advanced manufacturing, and developing innovative CAD solutions in SolidWorks and AutoCAD.</p>
+        <div class="flex gap-4 flex-wrap justify-center z-10">
+            <a href="#projects" class="bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 px-8 py-4 rounded-xl text-lg font-bold shadow-lg transition transform hover:-translate-y-1">Explore My Work</a>
+            <a href="#contact" class="border border-slate-500 hover:border-white bg-slate-900/50 hover:bg-slate-900 px-8 py-4 rounded-xl text-lg font-semibold transition transform hover:-translate-y-1">Get In Touch</a>
         </div>
+    </section>
 
-        <h1 className="text-5xl md:text-7xl font-bold mb-4">
-          Md Obydur Rahman
-        </h1>
-
-        <p className="text-xl md:text-2xl text-gray-200 mb-6">
-          Mechanical Engineering Student | CAD Designer | Future Engineer
-        </p>
-
-        <p className="max-w-3xl text-gray-300 text-lg leading-relaxed mb-8">
-          Passionate Mechanical Engineering student from KUET with strong interest in CAD design, automobile engineering, aerodynamics, and innovative engineering solutions.
-        </p>
-
-        <div className="flex gap-4 flex-wrap justify-center">
-          <a
-            href="#projects"
-            className="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-2xl text-lg font-semibold shadow-lg transition"
-          >
-            View Projects
-          </a>
-
-          <a
-            href="#contact"
-            className="border border-white hover:bg-white hover:text-black px-6 py-3 rounded-2xl text-lg font-semibold transition"
-          >
-            Contact Me
-          </a>
-        </div>
-      </section>
-
-      {/* About */}
-      <section className="py-20 px-6 md:px-20 bg-gray-900">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold mb-8 text-orange-400">About Me</h2>
-
-          <div className="grid md:grid-cols-2 gap-10">
-            <div>
-              <p className="text-gray-300 text-lg leading-relaxed">
-                I am currently studying Mechanical Engineering at KUET. I am highly interested in automobile engineering, aerodynamics, manufacturing, and CAD modeling.
-              </p>
-
-              <p className="text-gray-300 text-lg leading-relaxed mt-6">
-                My goal is to build innovative engineering solutions and pursue higher studies abroad with scholarship opportunities.
-              </p>
+    <section id="about" class="py-24 px-6 md:px-20 bg-slate-900/50 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex items-center space-x-4 mb-12">
+                <h2 class="text-4xl font-bold tracking-tight text-white">About & <span class="text-orange-500">Education</span></h2>
+                <div class="h-[2px] bg-gradient-to-r from-orange-500 to-transparent flex-grow"></div>
             </div>
-
-            <div className="bg-gray-800 p-8 rounded-3xl shadow-xl">
-              <h3 className="text-2xl font-semibold mb-6">Quick Info</h3>
-
-              <ul className="space-y-4 text-gray-300 text-lg">
-                <li>🎓 KUET Mechanical Engineering Student</li>
-                <li>🛠 Skilled in SolidWorks & AutoCAD</li>
-                <li>💻 Basic C Programming</li>
-                <li>📊 MS Word & PowerPoint Expert</li>
-                <li>🚗 Interested in Automobile Engineering</li>
-                <li>✈ Passionate About Aerodynamics</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills */}
-      <section className="py-20 px-6 md:px-20 bg-gray-950">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center text-orange-400">
-            Skills
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              "SolidWorks",
-              "AutoCAD",
-              "MS PowerPoint",
-              "MS Word",
-              "C Programming",
-              "Technical Presentation",
-            ].map((skill, index) => (
-              <div
-                key={index}
-                className="bg-gray-800 rounded-3xl p-8 text-center shadow-xl hover:scale-105 transition"
-              >
-                <h3 className="text-2xl font-semibold">{skill}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Projects */}
-      <section id="projects" className="py-20 px-6 md:px-20 bg-gray-900">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-orange-400 text-center">
-            Projects
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((project) => (
-              <div
-                key={project}
-                className="bg-gray-800 rounded-3xl overflow-hidden shadow-xl hover:translate-y-[-5px] transition"
-              >
-                <div className="h-52 bg-gradient-to-r from-blue-700 to-orange-500"></div>
-
-                <div className="p-6">
-                  <h3 className="text-2xl font-semibold mb-4">
-                    CAD Project {project}
-                  </h3>
-
-                  <p className="text-gray-300 leading-relaxed">
-                    Add your SolidWorks or AutoCAD project description here.
-                  </p>
+            <div class="grid md:grid-cols-3 gap-12 items-start">
+                <div class="md:col-span-2 space-y-6">
+                    <p class="text-slate-300 text-lg leading-relaxed">I am currently pursuing my undergraduate studies in <strong class="text-white">Mechanical Engineering</strong> at Khulna University of Engineering & Technology (KUET). My engineering journey is driven by a deep fascination with automotive structural safety, aerodynamic optimization, and manufacturing.</p>
+                    <p class="text-slate-300 text-lg leading-relaxed">With a solid foundation in computer-aided design (CAD), I enjoy bringing complex mechanical systems to life digitally and conducting aerodynamic fluid flow simulations.</p>
+                    <div class="pt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-white">Academic Journey</h3>
+                        <div class="space-y-6 border-l-2 border-orange-500 pl-4 ml-2">
+                            <div>
+                                <h4 class="text-lg font-bold text-orange-400">B.Sc. in Mechanical Engineering</h4>
+                                <p class="text-sm text-slate-400">Khulna University of Engineering & Technology (KUET)</p>
+                                <p class="text-xs text-slate-500">Current</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-amber-400">Higher Secondary Certificate (HSC)</h4>
+                                <p class="text-sm text-slate-400">Science Group | GPA: 5.00 / 5.00</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-amber-500">Secondary School Certificate (SSC)</h4>
+                                <p class="text-sm text-slate-400">Science Group | GPA: 5.00 / 5.00</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Achievements */}
-      <section className="py-20 px-6 md:px-20 bg-gray-950">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-12 text-orange-400">
-            Achievements
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-800 p-8 rounded-3xl shadow-xl">
-              <h3 className="text-2xl font-semibold mb-4">SSC GPA 5.00</h3>
-              <p className="text-gray-300">
-                Successfully achieved GPA 5.00 in SSC examination.
-              </p>
+                <div class="md:col-span-1 bg-gradient-to-b from-slate-800 to-slate-900 p-8 rounded-3xl shadow-2xl border border-slate-700/50 sticky top-6">
+                    <h3 class="text-2xl font-bold mb-6 text-amber-500 flex items-center gap-2"><span>📋</span> Quick Specifications</h3>
+                    <ul class="space-y-4 text-slate-300 text-base">
+                        <li class="flex items-start gap-2">⚙️ <span>KUET Mechanical Engineering</span></li>
+                        <li class="flex items-start gap-2">🛠️ <span>SolidWorks & AutoCAD Modeling</span></li>
+                        <li class="flex items-start gap-2">💻 <span>Algorithm implementation via C</span></li>
+                        <li class="flex items-start gap-2">📊 <span>Technical Docs & Presentations</span></li>
+                        <li class="flex items-start gap-2">🏎️ <span>Automotive Design Fanatic</span></li>
+                        <li class="flex items-start gap-2">✈️ <span>Aerodynamics enthusiast</span></li>
+                    </ul>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div className="bg-gray-800 p-8 rounded-3xl shadow-xl">
-              <h3 className="text-2xl font-semibold mb-4">HSC GPA 5.00</h3>
-              <p className="text-gray-300">
-                Successfully achieved GPA 5.00 in HSC examination.
-              </p>
+    <section class="py-24 px-6 md:px-20 bg-slate-950">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold mb-4 text-center">Technical <span class="text-orange-500">Arsenal</span></h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+                <div class="bg-slate-900 border border-slate-880 rounded-2xl p-6 text-center hover:border-orange-500/50 transition group">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition">📐</div>
+                    <h3 class="text-xl font-bold">SolidWorks</h3>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-center hover:border-orange-500/50 transition group">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition">✍️</div>
+                    <h3 class="text-xl font-bold">AutoCAD</h3>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-center hover:border-orange-500/50 transition group">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition">📊</div>
+                    <h3 class="text-xl font-bold">MS PowerPoint</h3>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-center hover:border-orange-500/50 transition group">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition">📝</div>
+                    <h3 class="text-xl font-bold">MS Word</h3>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      {/* Contact */}
-      <section id="contact" className="py-20 px-6 md:px-20 bg-gray-900">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-10 text-orange-400">
-            Contact Me
-          </h2>
-
-          <div className="bg-gray-800 rounded-3xl p-10 shadow-xl">
-            <p className="text-xl text-gray-300 mb-4">
-              📧 yourmail@gmail.com
-            </p>
-
-            <p className="text-xl text-gray-300 mb-4">
-              📍 Khulna, Bangladesh
-            </p>
-
-            <p className="text-xl text-gray-300">
-              🔗 Add your LinkedIn / GitHub link here
-            </p>
-          </div>
+    <section id="video-showcase" class="py-24 px-6 md:px-20 bg-slate-900">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex items-center space-x-4 mb-12">
+                <h2 class="text-4xl font-bold tracking-tight text-white">Mechanism <span class="text-orange-500">Animation</span></h2>
+                <div class="h-[2px] bg-gradient-to-r from-orange-500 to-transparent flex-grow"></div>
+            </div>
+            <p class="text-slate-300 mb-8 text-lg">SolidWorks Flow Simulation & Motion Study:</p>
+            <div class="bg-slate-950 p-4 rounded-3xl border border-slate-800 shadow-2xl overflow-hidden aspect-video">
+                <video class="w-full h-full rounded-2xl object-cover" controls>
+                    <source src="solidworks_flow_simulation.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
-      </section>
+    </section>
 
-      {/* Footer */}
-      <footer className="py-8 bg-black text-center text-gray-400">
-        <p>© 2026 Md Obydur Rahman | Mechanical Engineering Portfolio</p>
-      </footer>
-    </div>
-  );
-}
+    <section id="projects" class="py-24 px-6 md:px-20 bg-slate-950">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold mb-4 text-center">Engineering <span class="text-orange-500">Projects</span></h2>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-slate-700 transition group flex flex-col h-full">
+                    <div class="h-52 bg-slate-800 relative overflow-hidden">
+                        <img src="project1.png" alt="Project 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition">Chassis Design & Simulation</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4 flex-grow">Detailed structural design and stress analysis of an automotive chassis frame with optimization for aerodynamic resistance.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-slate-700 transition group flex flex-col h-full">
+                    <div class="h-52 bg-slate-800 relative overflow-hidden">
+                        <img src="project2.png" alt="Project 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition">Mechanical Gear Transmission</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4 flex-grow">A precise 2D and 3D schematic rendering of a multi-stage reduction gearbox system including technical calculations.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-slate-700 transition group flex flex-col h-full">
+                    <div class="h-52 bg-slate-800 relative overflow-hidden">
+                        <img src="project3.png" alt="Project 3" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition">Airfoil Fluid Flow Analysis</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4 flex-grow">Basic computational simulation profiling the lift and drag configurations across varied custom airfoil cross-sections.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-slate-700 transition group flex flex-col h-full">
+                    <div class="h-52 bg-slate-800 relative overflow-hidden">
+                        <img src="project4.png" alt="Project 4" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition">IC Engine Component Modeling</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4 flex-grow">3D modeling and structural rendering of an internal combustion engine piston assembly and crankshaft.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-slate-700 transition group flex flex-col h-full">
+                    <div class="h-52 bg-slate-800 relative overflow-hidden">
+                        <img src="project5.png" alt="Project 5" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition">Piping Layout Diagram</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4 flex-grow">Detailed 2D engineering layout plan for industrial fluid distribution systems modeled using AutoCAD.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-slate-700 transition group flex flex-col h-full">
+                    <div class="h-52 bg-slate-800 relative overflow-hidden">
+                        <img src="project6.png" alt="Project 6" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition">CNC Toolpath Optimization</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4 flex-grow">Project focusing on G-code generation and path optimization for automated mechanical lathe systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 md:px-20 bg-slate-900">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-4 text-center">Let's Connect <span class="text-orange-500">Engineers</span></h2>
+            <div class="grid md:grid-cols-5 gap-8 mt-12">
+                <div class="md:col-span-2 space-y-4">
+                    <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
+                        <span class="text-slate-400 text-xs block mb-1 uppercase">Email Address</span>
+                        <a href="mailto:obydur.kuet@gmail.com" class="text-base font-bold text-white hover:text-orange-400 transition">obydur.kuet@gmail.com</a>
+                    </div>
+                    <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
+                        <span class="text-slate-400 text-xs block mb-1 uppercase">Digital Channels</span>
+                        <div class="flex gap-4 mt-2">
+                            <a href="https://linkedin.com" target="_blank" class="text-sm font-bold text-orange-400 hover:underline">LinkedIn &rarr;</a>
+                            <a href="https://github.com/Obydur18" target="_blank" class="text-sm font-bold text-orange-400 hover:underline">GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="md:col-span-3 bg-slate-950 p-8 rounded-2xl border border-slate-800 space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 uppercase mb-2">Your Name</label>
+                        <input type="text" placeholder="John Doe" class="w-full bg-slate-900 border border-slate-800 p-3 rounded-xl text-white outline-none focus:border-orange-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 uppercase mb-2">Message</label>
+                        <textarea rows="4" placeholder="Hello Obydur..." class="w-full bg-slate-900 border border-slate-800 p-3 rounded-xl text-white outline-none focus:border-orange-500"></textarea>
+                    </div>
+                    <button type="button" class="w-full bg-gradient-to-r from-orange-500 to-amber-600 py-3 rounded-xl font-bold">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 bg-slate-950 border-t border-slate-900 text-center text-slate-500 text-sm">
+        <p>&copy; 2026 Md Obydur Rahman | KUET Mechanical Engineering Portfolio</p>
+    </footer>
+
+</body>
+</html>
